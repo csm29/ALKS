@@ -20,4 +20,4 @@ import yaml
 class LineDetectionNode(Node):
     def __init__(self):
         super().__init__('line_detect')
-images
+images verification
