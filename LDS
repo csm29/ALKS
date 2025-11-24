@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+# image version
+VERSION = "2.0.1"
+
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image, Joy
+from cv_bridge import CvBridge
+import cv2
+import numpy as np
+from ros_robot_controller_msgs.msg import MotorsState, MotorState
+from ultralytics import YOLO
+import torch
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+import time
+from std_msgs.msg import Int32, Float64
+import yaml
+
+
+class LineDetectionNode(Node):
+    def __init__(self):
+        super().__init__('line_detect')
