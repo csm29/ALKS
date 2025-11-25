@@ -21,4 +21,4 @@ class LineDetectionNode(Node):
     def __init__(self):
         super().__init__('line_detect')
 
-
+image verification
